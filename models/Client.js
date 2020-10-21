@@ -11,12 +11,16 @@ const ClientSchema = mongoose.Schema({
         unique: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     },
     date: {
         type: Date,
         default: Date.now
+    },
+    resto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'resto'
     }
 })
 
